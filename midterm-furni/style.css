@@ -12,7 +12,7 @@ body {
     background-color: #fff;
 }
 
-/* --- Global Button Styles --- */
+
 .btn-warning {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
@@ -23,7 +23,7 @@ body {
 }
 
 .btn-warning:hover {
-    background-color: #fbd66e; /* Lighter yellow */
+    background-color: #fbd66e; 
     border-color: #fbd66e;
     color: var(--dark-text);
 }
@@ -56,7 +56,7 @@ body {
     border-color: #fff;
 }
 
-/* --- Header & Navigation --- */
+
 header {
     background-color: var(--primary-color);
 }
@@ -74,7 +74,7 @@ header {
 }
 
 .navbar-nav .nav-link.active {
-    /* Active link underline style */
+    
     border-bottom: 2px solid var(--accent-color);
     color: #fff !important;
 }
@@ -83,7 +83,7 @@ header {
     color: #fff !important;
 }
 
-/* Navbar Icons */
+
 .navbar .nav-link i.bi {
     font-size: 1.25rem;
     line-height: 1; 
@@ -96,7 +96,7 @@ header {
     opacity: 1;
 }
 
-/* --- Hero Section --- */
+
 .hero-section {
     background-color: var(--primary-color);
     padding: 100px 0;
@@ -137,7 +137,7 @@ header {
     }
 }
 
-/* --- Crafted With Excellent Material Section --- */
+
 .material-section {
     padding: 80px 0;
 }
@@ -184,7 +184,7 @@ header {
     cursor: pointer;
 }
 
-/* --- Why Choose Us Section --- */
+
 .why-choose-us-section {
     padding: 80px 0;
 }
@@ -211,7 +211,7 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Modern Interior Design Grid Section --- */
+
 .modern-design-section {
     padding: 80px 0;
     background-color: #fff;
@@ -219,110 +219,103 @@ header {
 
 .image-grid {
     position: relative;
-    /* Ensure the grid container has a fixed height for proper vertical alignment */
-    height: 480px; /* Adjusted height to better fit the visual */
-    display: flex; /* Make the row itself a flex container */
-    gap: 20px; /* Gap between the left and right columns of images */
+    height: 480px; 
+    display: flex; 
+    gap: 20px; 
 }
 
-/* Left Column - Large Vertical Image (Sofa/Plants) */
+
 .image-grid .image-col-left {
-    flex: 0 0 calc(50% - 10px); /* Takes slightly less than 50% to account for gap */
+    flex: 0 0 calc(50% - 10px); 
     height: 100%;
 }
 
 .image-grid .large-grid-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
 }
 
-/* Right Column - Two Small Stacked Images */
+
 .image-grid .image-col-right {
-    flex: 0 0 calc(50% - 10px); /* Takes slightly less than 50% to account for gap */
+    flex: 0 0 calc(50% - 10px); 
     height: 100%;
-    display: flex; /* Make this column a flex container */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: space-between; /* Space out the two images */
-    gap: 15px; /* Gap between the two small images */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    gap: 15px; 
     position: relative;
-    z-index: 2; /* Ensure these images appear above other elements */
+    z-index: 2;
 }
 
 .image-grid .small-grid-img {
     width: 100%;
-    /* Let flexbox handle height distribution with 'space-between' */
     height: auto; 
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific adjustment for the bottom-right image (the stool) for overlapping look */
-/* This creates the overlap with the text block below */
+
 .image-grid .bottom-right-img {
     position: relative;
-    top: 50px; /* Move slightly down, effectively overlapping the section below */
-    left: -20px; /* Move slightly left, overlapping the left column */
-    z-index: 5; /* Ensure it's on top of everything else */
-    width: calc(100% + 20px); /* Extend its width to cover the left offset */
+    top: 50px; 
+    left: -20px; 
+    z-index: 5; 
+    width: calc(100% + 20px); 
 }
 
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 991.98px) {
     .image-grid {
-        flex-direction: column; /* Stack image columns vertically */
-        height: auto; /* Allow height to adjust */
+        flex-direction: column; 
+        height: auto; 
         gap: 15px;
     }
     .image-grid .image-col-left,
     .image-grid .image-col-right {
-        flex: 0 0 100%; /* Take full width */
+        flex: 0 0 100%; 
         height: auto;
     }
     .image-grid .large-grid-img {
-        height: 350px; /* Fixed height for consistency on mobile */
+        height: 350px; 
     }
     .image-grid .small-grid-img {
-        height: 200px; /* Fixed height for consistency on mobile */
+        height: 200px; 
     }
     .image-grid .bottom-right-img {
-        position: static; /* Remove absolute positioning */
-        margin-top: 15px; /* Add some space */
+        position: static; 
+        margin-top: 15px; 
         left: 0;
         bottom: 0;
         width: 100%;
     }
 }
 
-/* Custom List for "We Help You Make Modern Interior Design" Section */
 
 .custom-list {
     padding-left: 0;
     
-    /* ENABLES TWO-COLUMN ARRANGEMENT (Flexbox) */
     display: flex;
     flex-wrap: wrap; 
-    /* Set a small horizontal gap and a larger vertical gap */
     column-gap: 20px; 
     row-gap: 15px;
 }
 
 .custom-list li {
     position: relative;
-    /* Indentation for the bullet point */
+   
     padding-left: 25px;
-    margin-bottom: 0; /* Margin is now handled by row-gap */
+    margin-bottom: 0; 
     color: var(--light-text);
     
-    /* CALCULATE WIDTH FOR TWO COLUMNS */
-    /* Set width to a fixed 48% to guarantee horizontal space */
+   
     width: 48%; 
 }
 
-/* Bullet Point Styling (Green Dot) */
+
 .custom-list li:before {
     content: "\2022"; 
     font-family: 'Inter', sans-serif; 
@@ -335,9 +328,9 @@ header {
     line-height: 1.5; 
 }
 
-/* Responsive adjustment for small screens */
+
 @media (max-width: 991.98px) {
-    /* Below large desktop size, make it a single column */
+   
     .custom-list li {
         width: 100%;
         margin-bottom: 15px;
@@ -346,7 +339,6 @@ header {
 
 
 
-/* --- Small Product Grid Section --- */
 .product-grid-section {
     background-color: var(--bg-light);
     padding: 60px 0;
@@ -370,7 +362,6 @@ header {
     color: var(--primary-color);
 }
 
-/* --- Recent Blog Section --- */
 .recent-blog-section {
     padding: 80px 0;
 }
@@ -390,24 +381,20 @@ header {
     color: var(--primary-color) !important;
 }
 
-/* --- Footer --- */
-
-
-/* --- Footer 01 Styles (New Footer) --- */
 
 :root {
-    --furni-primary-color: #3b5d50; /* The dark green from the image */
+    --furni-primary-color: #3b5d50; 
     --furni-text-color-light: #6a6a6a;
     --furni-text-color-dark: #2f2f2f;
     --furni-link-hover: #2f2f2f;
-    --furni-bg-light: #f5f5f5; /* Light background for the footer */
+    --furni-bg-light: #f5f5f5; 
 }
 
 .footer-01 {
     font-family: 'Poppins', sans-serif;
     background-color: var(--furni-bg-light);
     color: var(--furni-text-color-light);
-    padding: 80px 0 20px 0; /* Adjust padding as needed */
+    padding: 80px 0 20px 0; 
     font-size: 0.95rem;
 }
 
@@ -420,12 +407,10 @@ header {
 .footer-01 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px; /* Counter-act column padding */
+    margin-left: -15px;
     margin-right: -15px;
 }
 
-/* Custom Column Layout for Non-Bootstrap */
-/* If you are using Bootstrap, remove these .col-lg-X styles */
 .footer {
   background-color: #f8f9f8;
   padding: 50px 0 30px;
@@ -433,7 +418,7 @@ header {
   overflow: hidden;
 }
 
-/* Newsletter Section */
+ 
 .newsletter {
   display: flex;
   align-items: center;
@@ -486,9 +471,7 @@ header {
 }
 
 
-/* ============================
-   Modern Interior Design Section
-   ============================ */
+
 .modern-interior {
   background-color: #f3f5f4;
   padding: 100px 0;
@@ -502,7 +485,6 @@ header {
   gap: 40px;
 }
 
-/* ===== Left Side Images ===== */
 .interior-left {
   display: flex;
   flex-direction: column;
@@ -533,7 +515,7 @@ header {
   display: block;
 }
 
-/* ===== Right Side Text ===== */
+
 .interior-right {
   flex: 1 1 45%;
   color: #333;
@@ -584,7 +566,6 @@ header {
   background-color: #1d3b31;
 }
 
-/* ===== Responsive Fixes ===== */
 @media (max-width: 992px) {
   .interior-container {
     flex-direction: column;
@@ -604,7 +585,6 @@ header {
   }
 }
 
-/* ===== Newsletter Section (top of footer) ===== */
 .newsletter {
   display: flex;
   align-items: center;
@@ -658,7 +638,7 @@ header {
   background-color: #1e3f34;
 }
 
-/* Chair image positioned on right */
+
 .footer-chair {
   position: absolute;
   right: 80px;
@@ -667,7 +647,7 @@ header {
   height: auto;
 }
 
-/* ===== Footer Content ===== */
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -717,7 +697,7 @@ header {
   color: #244a3e;
 }
 
-/* ===== Bottom Row ===== */
+
 .footer-bottom {
   border-top: 1px solid #ddd;
   margin: 0 80px;
@@ -744,7 +724,6 @@ header {
   gap: 15px;
 }
 
-/* ===== Responsive Fixes ===== */
 @media (max-width: 992px) {
   .newsletter {
     flex-direction: column;
@@ -773,3 +752,4 @@ header {
     width: 100%;
   }
 }
+
